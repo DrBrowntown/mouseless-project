@@ -26,11 +26,8 @@ function paintToCanvas() {
 
     return setInterval(() => {
         ctx.drawImage(video, 0, 0, width, height);
-
-        pixels = ctx.getImageData(0, 0, width, height);
-  
+        pixels = ctx.getImageData(0, 0, width, height);  
         ctx.putImageData(pixels, 0, 0);
-
     }, 16);
 }
 
@@ -51,6 +48,8 @@ getVideo();
 
 video.addEventListener('canplay', paintToCanvas);
 
+//Speech 
+
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
 const recognition = new SpeechRecognition();
@@ -61,7 +60,7 @@ const words = document.querySelector('.words');
 words.appendChild(p);
 
 recognition.addEventListener('result', e => {
-// console.log(e);
+
 const transcript = Array.from(e.results)
   .map(result => result[0])
   .map(result => result.transcript)
@@ -73,7 +72,6 @@ const transcript = Array.from(e.results)
     words.appendChild(p);
   }
   if(transcript.includes('cheese')) {
-
     takePhoto();
   }
   
