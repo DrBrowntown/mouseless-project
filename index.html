@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photobooth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="photobooth"></div>
+    <h1>SAY CHEESE!!</h1>
+    <canvas class="photo"></canvas>
+    <video class="player"></video>
+    <div class="strip"></div>
+    <div class="words" contenteditable></div>
+  </div>
+
+  <audio class="snap" src="http://wesbos.com/demos/photobooth/snap.mp3" hidden></audio>
+
+  <script src="scripts.js"></script>
+  <script>
+ 
+
+    </script>
+    <style>
+    html {
+      font-size: 10px;
+      background-image: url('curtain.png');
+      color: yellow;
+
+    }
+
+    body {
+      
+      font-family: 'Comic Sans MS';
+      font-weight: 200;
+      font-size: 20px;
+
+    }
+
+    .words {
+      max-width:500px;
+      margin:50px auto;
+      background:white;
+      border-radius:5px;
+      box-shadow:10px 10px 0 rgba(0,0,0,0.1);
+      padding:1rem 2rem 1rem 5rem;
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
+      background-size: 100% 3rem;
+      position: relative;
+      line-height:3rem;
+      visibility: hidden;
+    }
+    p {
+      margin: 0 0 3rem;
+    }
+    video.player {
+        visibility: hidden;
+    }
+
+
+
+  </style>
+
+</body>
+</html>
