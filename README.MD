@@ -1,4 +1,4 @@
-#Photobooth
+# Photobooth
 
 ## Requirements
 
